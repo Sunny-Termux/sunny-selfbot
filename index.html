@@ -3,37 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunnyのホームページ</title>
+    <title>URL短縮サービス</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            margin: 0;
+            margin: 50px;
             padding: 20px;
+            background-color: #f4f4f4;
         }
-        header {
-            text-align: center;
-            background-color: #ffcc00;
-            padding: 10px 0;
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin-right: 10px;
         }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
+        button {
+            padding: 10px 15px;
         }
-        p {
-            font-size: 1.2em;
+        #result {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
+    <h1>URL短縮サービス</h1>
+    <input type="text" id="originalUrl" placeholder="短縮したいURLを入力してください">
+    <button onclick="shortenUrl()">短縮</button>
 
-<header>
-    <h1>Sunnyのホームページ</h1>
-</header>
+    <div id="result"></div>
 
-<main>
-    <p>こんにちは！これからたくさん書いていくよ。</p>
-</main>
+    <script>
+        async function shortenUrl() {
+            const originalUrl = document.getElementById('originalUrl').value;
+            const response = await fetch('/api/shorten', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ url: originalUrl })
+            });
 
+            if (response.ok) {
+                const data = await response.json();
+                document.getElementById('result').innerHTML = `短縮URL: <a href="${data.short_url}" target="_blank">${data.short_url}</a>`;
+            } else {
+                const error = await response.json();
+                document.getElementById('result').innerHTML = `エラー: ${error.message}`;
+            }
+        }
+    </script>
 </body>
 </html>
