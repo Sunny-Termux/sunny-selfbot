@@ -4,12 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunny's Homepage</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* 背景は薄いグレー */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff6347; /* タイトルはトマト色 */
+        }
+
+        .profile-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #1e90ff; /* 青色 */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .profile-btn:hover {
+            background-color: #32cd32; /* ホバー時はライムグリーン */
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 1em;
+        }
+
+        .footer a {
+            color: #ff8c00; /* ダークオレンジ */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #ff6347; /* ホバー時はトマト色 */
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Sunny's Homepage</h1>
-    <!-- Profile Button -->
-    <button onclick="window.location.href='https://sunnyurl.net/profile';">
-        プロフィール
-    </button>
+    <div class="content">
+        <h1>Welcome to Sunny's Homepage</h1>
+        <a href="profile.html" class="profile-btn">プロフィールを見る</a>
+        <div class="footer">
+            <p>プログラム作成: <a href="#">ChatGPT</a></p>
+        </div>
+    </div>
 </body>
 </html>
