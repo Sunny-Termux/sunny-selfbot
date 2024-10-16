@@ -9,25 +9,43 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url('assets/profile.png'); /* 適切な画像パスを指定 */
-            background-size: cover;
-            background-position: center;
+            background-color: #f0f0f0; /* 背景は薄いグレー */
             height: 100vh;
-            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
         }
 
         .content {
             text-align: center;
-            padding-top: 20%;
         }
 
         h1 {
             font-size: 3em;
+            color: #ff6347; /* タイトルはトマト色 */
         }
 
         .profile-info {
             font-size: 1.5em;
-            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .profile-info span {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .discord-name {
+            color: #1e90ff; /* 青色 */
+        }
+
+        .language {
+            color: #32cd32; /* ライムグリーン */
+        }
+
+        .created-by {
+            color: #ff8c00; /* ダークオレンジ */
         }
     </style>
 </head>
@@ -35,9 +53,9 @@
     <div class="content">
         <h1>Sunny's Profile</h1>
         <div class="profile-info">
-            Discord名: Sunny,4<br>
-            プログラム言語: JavaScript または Python<br>
-            プログラム作成: ChatGPT
+            <span class="discord-name">Discord名: Sunny,4</span>
+            <span class="language">プログラム言語: JavaScript または Python</span>
+            <span class="created-by">プログラム作成: ChatGPT</span>
         </div>
     </div>
 </body>
