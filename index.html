@@ -1,73 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunny's Homepage</title>
+    <title>Sunnyのプロフ</title>
+    <meta property="og:title" content="Sunnyのプロフ" />
+    <meta property="og:description" content="sunnyのプロフですこれから色々追加します。" />
+    <meta property="og:url" content="https://sunnyurl.net" />
     <style>
         body {
-            margin: 0;
-            padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0; /* 背景は薄いグレー */
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            text-align: center;
+            background-color: #f0f0f0;
             color: #333;
         }
-
-        .content {
-            text-align: center;
-        }
-
         h1 {
-            font-size: 3em;
-            color: #ff6347; /* タイトルはトマト色 */
+            color: #ff6347; /* トマト色 */
         }
-
-        .profile-btn, .discord-btn {
-            display: inline-block;
-            margin-top: 20px;
+        p {
+            color: #4682b4; /* スチールブルー */
+        }
+        .button {
             padding: 15px 30px;
             font-size: 1.2em;
             color: white;
-            background-color: #1e90ff; /* 青色 */
-            border: none;
+            background-color: #1e90ff; /* ドジャーブルー */
+            text-decoration: none;
             border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin: 20px 0;
+            transition: background-color 0.3s;
         }
-
-        .profile-btn:hover, .discord-btn:hover {
-            background-color: #32cd32; /* ホバー時はライムグリーン */
+        .button:hover {
+            background-color: #ff4500; /* オレンジレッド */
         }
-
-        .footer {
-            margin-top: 30px;
-            font-size: 1em;
+        .button-secondary {
+            background-color: #32cd32; /* ライムグリーン */
         }
-
-        .footer a {
-            color: #ff8c00; /* ダークオレンジ */
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer a:hover {
-            color: #ff6347; /* ホバー時はトマト色 */
+        .button-secondary:hover {
+            background-color: #228b22; /* フォレストグリーン */
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Welcome to Sunny's Homepage</h1>
-        <a href="profile.html" class="profile-btn">プロフィールを見る</a><br>
-        <a href="discordserver.html" class="discord-btn">おすすめdiscordサーバー</a>
-        <div class="footer">
-            <p>プログラム作成: <a href="#">ChatGPT</a></p>
-        </div>
-    </div>
+    <h1>Sunnyのプロフ</h1>
+    <p>詳細を確認するには以下のリンクをクリックしてください。</p>
+    <a href="profile.html" class="button" target="_blank">Sunnyのプロフを表示</a>
+    <br>
+    <a href="discordserver.html" class="button button-secondary">おすすめDiscordサーバー</a>
 </body>
 </html>
